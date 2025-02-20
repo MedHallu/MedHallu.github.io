@@ -115,9 +115,7 @@
       <h2 class="title is-3">Abstract</h2>
       <div class="content">
         <p>
-          As Large Language Models (LLMs) are increasingly employed in high-stakes medical applications, ensuring their reliability becomes critical. 
-          Medical Hallucination Detection presents a comprehensive benchmark for evaluating and detecting hallucinated outputs in LLMs.
-          Our study introduces a dataset and evaluation framework that distinguishes between accurate and hallucinated responses, providing insights into model performance in the medical domain.
+          Advancements in Large Language Models (LLMs) and their increasing use in medical question-answering necessitate rigorous evaluation of their reliability. A critical challenge lies in hallucination, where models generate plausible yet factually incorrect outputs. In the medical domain, this poses serious risks to patient safety and clinical decision-making. To address this, we introduce \textbf{MedHallu}, the first benchmark specifically designed for medical hallucination detection. MedHallu comprises 10,000 high-quality question-answer pairs derived from PubMedQA, with hallucinated answers systematically generated through a controlled pipeline. Our experiments show that state-of-the-art LLMs, including GPT-4o, Llama-3.1, and the medically fine-tuned UltraMedical, struggle with this binary hallucination detection task, with the best model achieving an F1 score as low as 0.625 for detecting ``hard'' category hallucinations. Using bidirectional entailment clustering, we show that harder-to-detect hallucinations are semantically closer to ground truth. Through experiments, we also show incorporating domain-specific knowledge and introducing a ``not sure'' category as one of the answer categories improves the precision and F1 scores by up to 38\% relative to baselines. 
         </p>
       </div>
     </div>
@@ -129,8 +127,8 @@
       <h2 class="title is-3">Introduction</h2>
       <div class="content">
         <p>
-          The deployment of LLMs in clinical settings demands rigorous validation of their factual accuracy. Hallucinations in medical responses can lead to adverse clinical outcomes.
-          In this work, we propose a benchmark specifically tailored to detect hallucinated outputs in medical LLMs and to understand the underlying challenges in model evaluation.
+          we present the \textbf{Med}ical \textbf{Hallu}cination detection dataset (\textbf{MedHallu}), a comprehensive corpus of 10,000 medical question-answer pairs derived from the established PubMedQA dataset. Each pair is meticulously annotated to distinguish accurate responses from hallucinated content. 
+          Furthermore, MedHallu is stratified into easy, medium, and hard detection tiers based on the subtlety of hallucinations, enabling granular evaluation of model capabilities.
         </p>
       </div>
     </div>
@@ -142,8 +140,10 @@
       <h2 class="title is-3">Methodology</h2>
       <div class="content">
         <p>
-          Our approach involves a multi-stage process including candidate generation, LLM-based quality filtering, and correctness verification using bidirectional entailment.
-          By incorporating domain-specific knowledge, our framework robustly distinguishes between correct and hallucinated responses.
+          The proposed methodological framework comprises a three-phase pipeline architected for robust hallucinated sample generation. 
+          The pipeline follows a sequential approach: (1) stochastic sampling of potential hallucinated responses based on in-context examples and precise definitions, (2) LLM-based quality filtering mechanisms, (3) correctness checking using bidirectional entailment and LLM prompting. (4) Sequential Improvement via TextGrad. 
+          Finally, inspired by HaluEval, we select the most similar sample generated, using semantic similarity in cases where a high-quality sample is not identified. 
+          This approach enables comprehensive identification and evaluation of linguistic hallucinations while minimizing false positives through multi-layered verification protocols.
         </p>
       </div>
     </div>
@@ -153,7 +153,7 @@
   <section class="section" id="BibTeX">
     <div class="container">
       <h2 class="title is-3">BibTeX Citation</h2>
-      <pre><code>@misc{pandit2025medhallu,
+      <pre><code>@article{pandit2025medhallu,
   title={Medical Hallucination Detection: A Comprehensive Benchmark for Detecting Hallucinations in LLMs},
   author={Pandit, Shrey and Xu, Jiawei and Hong, Junyuan and Wang, Zhangyang and Chen, Tianlong and Xu, Kaidi and Ding, Ying},
   booktitle={Preprint},
