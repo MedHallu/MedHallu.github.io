@@ -27,220 +27,234 @@
 
 <body>
 
-  <!-- Hero Section (light background) -->
-  <section class="hero is-light">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <h1 class="title">Medical Hallucination Detection</h1>
-        <h2 class="subtitle">A Comprehensive Benchmark for Detecting Hallucinations in Medical LLM Outputs</h2>
-        
-        <!-- Author List -->
-        <p class="is-size-5">
-          <strong>
-            <a href="https://sites.google.com/view/shrey-pandit/home">Shrey Pandit</a><sup>1</sup>
-          </strong>, 
-          <strong>
-            <a href="https://jiaweixu98.github.io/">Jiawei Xu</a><sup>1</sup>
-          </strong>, 
-          <strong>
-            <a href="https://jyhong.gitlab.io/">Junyuan Hong</a><sup>1</sup>
-          </strong>, 
-          <strong>
-            <a href="https://vita-group.github.io/research.html">Zhangyang Wang</a><sup>1</sup>
-          </strong>, 
-          <strong>
-            <a href="https://tianlong-chen.github.io/">Tianlong Chen</a><sup>2</sup>
-          </strong>, 
-          <strong>
-            <a href="https://kaidixu.com/">Kaidi Xu</a><sup>3</sup>
-          </strong>, 
-          <strong>
-            <a href="https://yingding.ischool.utexas.edu/">Ying Ding</a><sup>1</sup>
-          </strong>
-        </p>
-        <p class="is-size-6">
-          <sup>1</sup>University of Texas at Austin | 
-          <sup>2</sup>UNC Chapel Hill | 
-          <sup>3</sup>Drexel University
-        </p>
+<!-- Hero Section (light background) -->
+<section class="hero is-light">
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1 class="title">Medical Hallucination Detection</h1>
+      <h2 class="subtitle">A Comprehensive Benchmark for Detecting Hallucinations in Medical LLM Outputs</h2>
+      
+      <!-- Author List -->
+      <p class="is-size-5">
+        <strong>
+          <a href="https://sites.google.com/view/shrey-pandit/home">Shrey Pandit</a><sup>1</sup>
+        </strong>, 
+        <strong>
+          <a href="https://jiaweixu98.github.io/">Jiawei Xu</a><sup>1</sup>
+        </strong>, 
+        <strong>
+          <a href="https://jyhong.gitlab.io/">Junyuan Hong</a><sup>1</sup>
+        </strong>, 
+        <strong>
+          <a href="https://vita-group.github.io/research.html">Zhangyang Wang</a><sup>1</sup>
+        </strong>, 
+        <strong>
+          <a href="https://tianlong-chen.github.io/">Tianlong Chen</a><sup>2</sup>
+        </strong>, 
+        <strong>
+          <a href="https://kaidixu.com/">Kaidi Xu</a><sup>3</sup>
+        </strong>, 
+        <strong>
+          <a href="https://yingding.ischool.utexas.edu/">Ying Ding</a><sup>1</sup>
+        </strong>
+      </p>
+      <p class="is-size-6">
+        <sup>1</sup>University of Texas at Austin | 
+        <sup>2</sup>UNC Chapel Hill | 
+        <sup>3</sup>Drexel University
+      </p>
 
-        <!-- Links Section -->
-        <div class="column has-text-centered" style="margin-top: 1.5rem;">
-          <div class="publication-links">
-            <!-- Paper Link -->
-            <span class="link-block">
-              <a href="" class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="ai ai-arxiv"></i>
-                </span>
-                <span>Paper</span>
-              </a>
-            </span>
-            <!-- Code Link -->
-            <span class="link-block">
-              <a href="https://github.com/MedHallu" class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
-                </span>
-                <span>Code</span>
-              </a>
-            </span>
-            <!-- Dataset Link -->
-            <span class="link-block">
-              <a href="https://huggingface.co/datasets/UTAustin-AIHealth/MedHallu" class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">🤗</span>
-                <span>Dataset</span>
-              </a>
-            </span>
-          </div>
-        </div>
-
-        <!-- First Image (Placeholder or Actual) -->
-        <!-- Convert your PDF to PNG/JPG first; then replace image1.png below -->
-        <div class="columns is-centered" style="margin-top: 2rem;">
-          <div class="column is-half">
-            <figure class="image is-3by2">
-              <img src="static/images/image1.png" alt="Overview Image">
-            </figure>
-          </div>
+      <!-- Links Section -->
+      <div class="column has-text-centered" style="margin-top: 1.5rem;">
+        <div class="publication-links">
+          <!-- Paper Link (Add URL if available) -->
+          <span class="link-block">
+            <a href="" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="ai ai-arxiv"></i>
+              </span>
+              <span>Paper</span>
+            </a>
+          </span>
+          <!-- Code Link -->
+          <span class="link-block">
+            <a href="https://github.com/MedHallu" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="fab fa-github"></i>
+              </span>
+              <span>Code</span>
+            </a>
+          </span>
+          <!-- Dataset Link -->
+          <span class="link-block">
+            <a href="https://huggingface.co/datasets/UTAustin-AIHealth/MedHallu" class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">🤗</span>
+              <span>Dataset</span>
+            </a>
+          </span>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Abstract Section (white background) -->
-  <section class="section has-text-centered is-white">
-    <div class="container">
-      <h2 class="title is-3">Abstract</h2>
-      <div class="content">
-        <p>
-          Advancements in Large Language Models (LLMs) and their increasing use in medical 
-          question-answering necessitate rigorous evaluation of their reliability. A critical 
-          challenge lies in hallucination, where models generate plausible yet factually incorrect 
-          outputs. In the medical domain, this poses serious risks to patient safety and clinical 
-          decision-making. To address this, we introduce <strong>MedHallu</strong>, the first 
-          benchmark specifically designed for medical hallucination detection. MedHallu comprises 
-          10,000 high-quality question-answer pairs derived from PubMedQA, with hallucinated answers 
-          systematically generated through a controlled pipeline. Our experiments show that 
-          state-of-the-art LLMs, including GPT-4o, Llama-3.1, and the medically fine-tuned UltraMedical, 
-          struggle with this binary hallucination detection task, with the best model achieving an 
-          F1 score as low as 0.625 for detecting “hard” category hallucinations. Using bidirectional 
-          entailment clustering, we show that harder-to-detect hallucinations are semantically closer 
-          to ground truth. Through experiments, we also show incorporating domain-specific knowledge 
-          and introducing a “not sure” category as one of the answer categories improves the precision 
-          and F1 scores by up to 38% relative to baselines.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Introduction Section (grey background) -->
-  <section class="section has-text-centered is-light">
-    <div class="container">
-      <h2 class="title is-3">Introduction</h2>
-      <div class="content">
-        <p>
-          We present the <strong>Med</strong>ical <strong>Hallu</strong>cination detection dataset 
-          (<strong>MedHallu</strong>), a comprehensive corpus of 10,000 medical question-answer pairs 
-          derived from the established PubMedQA dataset. Each pair is meticulously annotated to 
-          distinguish accurate responses from hallucinated content. Furthermore, MedHallu is stratified 
-          into easy, medium, and hard detection tiers based on the subtlety of hallucinations, enabling 
-          granular evaluation of model capabilities.
-        </p>
-      </div>
-
-      <!-- Second Image (Placeholder or Actual) -->
-      <!-- Convert your PDF to an image file; then replace image2.png below -->
+      <!-- First Image with controlled width -->
       <div class="columns is-centered" style="margin-top: 2rem;">
-        <div class="column is-half">
-          <figure class="image is-3by2">
-            <img src="static/images/image2.png" alt="Example Pipeline">
+        <div class="column" style="max-width:600px; margin:0 auto;">
+          <figure class="image" style="width:100%; margin:auto;">
+            <img src="static/images/image1.png" alt="Overview Image" style="width:100%; height:auto;">
           </figure>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Methodology Section (white background) -->
-  <section class="section has-text-centered is-white">
-    <div class="container">
-      <h2 class="title is-3">Methodology</h2>
-      <div class="content">
-        <p>
-          The proposed methodological framework comprises a three-phase pipeline architected for robust 
-          hallucinated sample generation. The pipeline follows a sequential approach: 
-          (1) stochastic sampling of potential hallucinated responses based on in-context examples and 
-          precise definitions, 
-          (2) LLM-based quality filtering mechanisms, 
-          (3) correctness checking using bidirectional entailment and LLM prompting, and 
-          (4) sequential improvement via TextGrad. 
-          Inspired by HaluEval, we finally select the most similar sample generated—based on semantic 
-          similarity—if no high-quality sample is identified. This multi-layered approach enables 
-          comprehensive identification and evaluation of linguistic hallucinations while minimizing 
-          false positives.
-        </p>
-      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Results Section (grey background) -->
-  <section class="section has-text-centered is-light">
-    <div class="container">
-      <h2 class="title is-3">Results</h2>
-      <div class="content">
-        <p>
-          Below is a sample table of results from MedHallu, showing the performance of various LLMs.
-        </p>
-        <div class="table-container" style="overflow-x:auto;">
-          <table class="table is-bordered is-striped is-hoverable is-fullwidth">
-            <thead>
-              <tr>
-                <th>Model</th>
-                <th>F1 (No Knowledge)</th>
-                <th>F1 (With Knowledge)</th>
-                <th>F1 on "Hard"</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>GPT-4o</td>
-                <td>0.737</td>
-                <td>0.877</td>
-                <td>0.625</td>
-              </tr>
-              <tr>
-                <td>Llama-3.1</td>
-                <td>0.522</td>
-                <td>0.797</td>
-                <td>0.372</td>
-              </tr>
-              <tr>
-                <td>UltraMedical</td>
-                <td>0.619</td>
-                <td>0.773</td>
-                <td>0.524</td>
-              </tr>
-              <!-- Add or modify rows to match your data -->
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer Section (white background) -->
-  <section class="section is-white">
-    <div class="container has-text-centered">
+<!-- Abstract Section (white background) -->
+<section class="section has-text-centered is-white">
+  <div class="container">
+    <h2 class="title is-3">Abstract</h2>
+    <div class="content">
       <p>
-        <small>&copy; 2024 MedHallu Project. All rights reserved. | 
-          <a href="">Contact</a>
-        </small>
+        Advancements in Large Language Models (LLMs) and their increasing use in medical 
+        question-answering necessitate rigorous evaluation of their reliability. A critical 
+        challenge lies in hallucination, where models generate plausible yet factually incorrect 
+        outputs. In the medical domain, this poses serious risks to patient safety and clinical 
+        decision-making. To address this, we introduce <strong>MedHallu</strong>, the first 
+        benchmark specifically designed for medical hallucination detection. MedHallu comprises 
+        10,000 high-quality question-answer pairs derived from PubMedQA, with hallucinated answers 
+        systematically generated through a controlled pipeline. Our experiments show that 
+        state-of-the-art LLMs, including GPT-4o, Llama-3.1, and the medically fine-tuned UltraMedical, 
+        struggle with this binary hallucination detection task, with the best model achieving an 
+        F1 score as low as 0.625 for detecting “hard” category hallucinations. Using bidirectional 
+        entailment clustering, we show that harder-to-detect hallucinations are semantically closer 
+        to ground truth. Through experiments, we also show incorporating domain-specific knowledge 
+        and introducing a “not sure” category as one of the answer categories improves the precision 
+        and F1 scores by up to 38% relative to baselines.
       </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- JavaScript (jQuery, custom scripts, etc.) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="static/js/index.js"></script>
+<!-- Introduction Section (grey background) -->
+<section class="section has-text-centered is-light">
+  <div class="container">
+    <h2 class="title is-3">Introduction</h2>
+    <div class="content">
+      <p>
+        We present the <strong>Med</strong>ical <strong>Hallu</strong>cination detection dataset 
+        (<strong>MedHallu</strong>), a comprehensive corpus of 10,000 medical question-answer pairs 
+        derived from the established PubMedQA dataset. Each pair is meticulously annotated to 
+        distinguish accurate responses from hallucinated content. Furthermore, MedHallu is stratified 
+        into easy, medium, and hard detection tiers based on the subtlety of hallucinations, enabling 
+        granular evaluation of model capabilities.
+      </p>
+    </div>
+
+    <!-- Second Image (Placeholder or actual) -->
+    <div class="columns is-centered" style="margin-top: 2rem;">
+      <div class="column is-half">
+        <figure class="image is-3by2">
+          <img src="static/images/image2.png" alt="Pipeline">
+        </figure>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Methodology Section (white background) -->
+<section class="section has-text-centered is-white">
+  <div class="container">
+    <h2 class="title is-3">Methodology</h2>
+    <div class="content">
+      <p>
+        The proposed methodological framework comprises a three-phase pipeline architected for robust 
+        hallucinated sample generation. The pipeline follows a sequential approach: 
+        (1) stochastic sampling of potential hallucinated responses based on in-context examples and 
+        precise definitions, 
+        (2) LLM-based quality filtering mechanisms, 
+        (3) correctness checking using bidirectional entailment and LLM prompting, and 
+        (4) sequential improvement via TextGrad. 
+        Inspired by HaluEval, we finally select the most similar sample generated—based on semantic 
+        similarity—if no high-quality sample is identified. This multi-layered approach enables 
+        comprehensive identification and evaluation of linguistic hallucinations while minimizing 
+        false positives.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Results Section (grey background) -->
+<section class="section has-text-centered is-light">
+  <div class="container">
+    <h2 class="title is-3">Results</h2>
+    <div class="content">
+      <p>
+        Below is a comprehensive table comparing the performance of various LLMs with and without
+        knowledge on the MedHallu dataset (10,000 samples).
+      </p>
+      <!-- Multi-column table with knowledge/no knowledge comparison -->
+      <div class="table-container" style="overflow-x:auto; margin-top: 2rem;">
+        <table class="table is-bordered is-striped is-hoverable is-fullwidth">
+          <thead>
+            <tr>
+              <th rowspan="2" style="vertical-align: middle;">Model</th>
+              <th colspan="5">Without Knowledge</th>
+              <th colspan="5">With Knowledge</th>
+              <th rowspan="2" style="vertical-align: middle;">Δ Knowledge</th>
+            </tr>
+            <tr>
+              <th>Overall F1</th>
+              <th>Overall P</th>
+              <th>Easy F1</th>
+              <th>Med F1</th>
+              <th>Hard F1</th>
+              <th>Overall F1</th>
+              <th>Overall P</th>
+              <th>Easy F1</th>
+              <th>Med F1</th>
+              <th>Hard F1</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Example Rows (From the snippet you provided) -->
+            <tr>
+              <td>Qwen2.5-14B-Instruct</td>
+              <td>0.59</td><td>0.73</td><td>0.81</td><td>0.64</td><td>0.46</td>
+              <td><b>0.83</b></td><td>0.84</td><td><b>0.93</b></td><td>0.89</td><td>0.74</td>
+              <td>+0.24</td>
+            </tr>
+            <tr>
+              <td>Gemma-2-9b-it</td>
+              <td>0.61</td><td>0.73</td><td><b>0.83</b></td><td><b>0.73</b></td><td>0.44</td>
+              <td>0.81</td><td>0.78</td><td>0.88</td><td>0.85</td><td><b>0.76</b></td>
+              <td>+0.20</td>
+            </tr>
+            <!-- Add more rows as needed -->
+            <tr><td colspan="12" style="text-align:center;">[...]</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top: 1rem; font-size: 0.9em;">
+        “Overall P” denotes precision. “Δ Knowledge” is the performance change in Overall F1
+        when knowledge is provided. 
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer Section (white background) -->
+<section class="section is-white">
+  <div class="container has-text-centered">
+    <p>
+      <small>&copy; 2024 MedHallu Project. All rights reserved. | 
+        <a href="">Contact</a>
+      </small>
+    </p>
+  </div>
+</section>
+
+<!-- JS (jQuery, custom scripts if any) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="static/js/index.js"></script>
 </body>
 </html>
